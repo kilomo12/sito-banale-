@@ -88,6 +88,9 @@ nav img:hover{
   div.desc a:hover{
     color: chocolate;
   }
+ div.paypal_position{
+    padding-left: 33%;
+  }
   footer{
     height: auto;
     width: 100%;
