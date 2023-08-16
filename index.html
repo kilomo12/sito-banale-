@@ -81,6 +81,29 @@
           <iframe width="560" height="315" src="https://www.youtube.com/embed/QXVhoR86fkY?start=3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </div>
       </div>
+       <div class="paypal_position">
+        <div id="paypal-button-container-P-69A30217Y3862752DMTONJTA"></div>
+<script src="https://www.paypal.com/sdk/js?client-id=AdBVZwdZjEd9kVeab82ur9yPIGnhaQW5iRhsn1gqv2-8kZw6ZkBzs9T0dEmgzuj-baGsx9dIzuCn3OUR&vault=true&intent=subscription" data-sdk-integration-source="button-factory"></script>
+<script>
+  paypal.Buttons({
+      style: {
+          shape: 'rect',
+          color: 'gold',
+          layout: 'vertical',
+          label: 'subscribe'
+      },
+      createSubscription: function(data, actions) {
+        return actions.subscription.create({
+          /* Creates the subscription */
+          plan_id: 'P-69A30217Y3862752DMTONJTA'
+        });
+      },
+      onApprove: function(data, actions) {
+        alert(data.subscriptionID); // You can add optional success message for the subscriber here
+      }
+  }).render('#paypal-button-container-P-69A30217Y3862752DMTONJTA'); // Renders the PayPal button
+</script>
+      </div>
       <footer>
         <p>
         Agenzia di offerta multi-servizi
